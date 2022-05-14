@@ -1,0 +1,47 @@
+name: Deploy to GitHub pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    environment: production
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write   
+
+    steps:
+      - uses: actions/checkout@v2
+    with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+      
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+          cache: "yarn"
+      - run: yarn install
+
+      - name: Build
+        run: bin/bridgetown deploy
+
+      - name: Push
+        run: |
+          cd hg-pages
+          git config --global user.email "chimitcyrenov@mail.ru"
+          git config --global user.name "AndreyChim"
+          git init --initial-branch=gh-pades
+          touch ./.nojekyll
+          cp -r ./course_builder_bridgetown/* ./
+          git add -A
+          git commit -m 'deploy'
+          git push -f https://andreychim:${{ secrets.GITHUB_TOKEN }}@github.com/AndreyChim/course_builder_bridgetown.git gh-pages
