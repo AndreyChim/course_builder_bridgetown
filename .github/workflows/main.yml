@@ -36,7 +36,7 @@ jobs:
 
       - name: Push
         run: |
-          cd hg-pages
+          cd output
           git config --global user.email "chimitcyrenov@mail.ru"
           git config --global user.name "AndreyChim"
           git init --initial-branch=gh-pades
