@@ -18,7 +18,7 @@
 
 url: "https://andreychim.github.io/"
 
-base_path: "/course_builder_bridgetown"
+base_path: course_builder_bridgetown
 
 template_engine: erb
 
