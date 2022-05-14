@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    environment: secret
+    environment: production
     runs-on: ubuntu-latest
     permissions:
       contents: write
