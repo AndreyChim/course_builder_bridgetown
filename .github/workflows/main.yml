@@ -38,7 +38,7 @@ jobs:
         working-directory: output
         run: |
           cd /
-          cd output
+          cd ~/output
           ls -la
           git config --global user.email "chimitcyrenov@mail.ru"
           git config --global user.name "AndreyChim"
