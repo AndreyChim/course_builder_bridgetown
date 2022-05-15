@@ -37,6 +37,8 @@ jobs:
       - name: Push
         working-directory: output
         run: |
+        steps:
+          - uses: actions/checkout@v2
           cd output
           git config --global user.email "chimitcyrenov@mail.ru"
           git config --global user.name "AndreyChim"
