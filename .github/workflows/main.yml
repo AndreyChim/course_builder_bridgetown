@@ -35,10 +35,9 @@ jobs:
         run: bin/bridgetown deploy
 
       - name: Push
-        working-directory: output
         run: |
-          cd /
-          ls -la
+          run: |
+          cd output
           git config --global user.email "chimitcyrenov@mail.ru"
           git config --global user.name "AndreyChim"
           git init --initial-branch=gh-pades
