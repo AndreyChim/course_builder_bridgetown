@@ -5,13 +5,14 @@ on:
   push:
     branches:
       - main
-defaults:
- run:
-  working-directory: ./output
+
 jobs:
   deploy:
     environment: production
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./output
     permissions:
       contents: write
       packages: write   
