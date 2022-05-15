@@ -35,7 +35,7 @@ jobs:
         run: bin/bridgetown deploy
 
       - name: Push
-        working-directory: ./course_builder_bridgetown/* ./
+        working-directory: output
         run: |
           cd output
           git config --global user.email "chimitcyrenov@mail.ru"
