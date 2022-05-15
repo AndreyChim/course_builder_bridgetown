@@ -5,7 +5,9 @@ on:
   push:
     branches:
       - main
-
+defaults:
+ run:
+  working-directory: ./output
 jobs:
   deploy:
     environment: production
@@ -30,7 +32,7 @@ jobs:
           node-version: "16"
           cache: "yarn"
       - run: yarn install
-          working-directory: ${{env.working-directory}}
+
       - name: Build
         run: bin/bridgetown deploy
 
