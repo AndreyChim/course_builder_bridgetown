@@ -37,9 +37,7 @@ jobs:
       - name: Push
         working-directory: output
         run: |
-        steps:
-          - uses: actions/checkout@v2
-          cd output
+          ls -la
           git config --global user.email "chimitcyrenov@mail.ru"
           git config --global user.name "AndreyChim"
           git init --initial-branch=gh-pades
