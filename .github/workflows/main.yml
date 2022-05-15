@@ -30,7 +30,7 @@ jobs:
           node-version: "16"
           cache: "yarn"
       - run: yarn install
-
+        working-directory: ${{env.working-directory}}
       - name: Build
         run: bin/bridgetown deploy
 
