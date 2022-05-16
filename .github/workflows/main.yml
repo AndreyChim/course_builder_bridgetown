@@ -36,13 +36,12 @@ jobs:
 
       - name: Push
         run: |
-          run: |
           cd output
           git config --global user.email "chimitcyrenov@mail.ru"
           git config --global user.name "AndreyChim"
           git init --initial-branch=gh-pades
           touch ./.nojekyll
-          cp -r ~./course_builder_bridgetown/* ./
+          cp -R ~./course_builder_bridgetown/* ./
           git add -A
           git commit -m 'deploy'
           git push -f https://andreychim:${{ secrets.GITHUB_TOKEN }}@github.com/AndreyChim/course_builder_bridgetown.git gh-pages
