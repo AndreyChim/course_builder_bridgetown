@@ -43,4 +43,4 @@ jobs:
           touch ./.nojekyll
           git add .
           git commit -m "deploy"
-          git push origin gh-pages -f https://andreychim:${{ secrets.GITHUB_TOKEN }}@github.com/AndreyChim/course_builder_bridgetown.git gh-pages
+          git push origin -f https://andreychim:${{ secrets.GITHUB_TOKEN }}@github.com/AndreyChim/course_builder_bridgetown.git gh-pages
