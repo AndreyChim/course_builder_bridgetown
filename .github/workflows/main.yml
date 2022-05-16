@@ -41,7 +41,7 @@ jobs:
           git config --global user.name "AndreyChim"
           git init --initial-branch=gh-pades
           touch ./.nojekyll
-          cp -r /course_builder_bridgetown/* /
+          cp -r ./course_builder_bridgetown/* /
           git add -A
           git commit -m 'deploy'
           git push -f https://andreychim:${{ secrets.GITHUB_TOKEN }}@github.com/AndreyChim/course_builder_bridgetown.git gh-pages
