@@ -43,4 +43,5 @@ jobs:
           touch ./.nojekyll
           git add .
           git commit -m "deploy"
+          git remote add origin git@github.com:AndreyChim/course_builder_bridgetown.git
           git push origin -f git@github.com:AndreyChim/course_builder_bridgetown.git gh-pages
