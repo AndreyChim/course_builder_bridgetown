@@ -16,7 +16,8 @@
 
 # the base hostname & protocol for your site, e.g. https://example.com
 
-url: "https://andreychim.github.io/"
+url: "https://AndreyChim.github.io/course_builder_bridgetown/"
+
 
 base_path: "/course_builder_bridgetown"
 
@@ -25,12 +26,23 @@ template_engine: erb
 collections:
   courses:
     output: true
+    permalink: pretty
+    future: true
     relations:
-      has_many: units
+      has_many: group_units
   units:
     output: true
+    permalink: pretty
+    future: true
     relations:
-      has_many: courses
+      has_many:
+        - group_units
+  group_units:
+    output: false
+    relations:
+      belongs_to:
+        - course
+        - unit 
         
 
 #pagination:

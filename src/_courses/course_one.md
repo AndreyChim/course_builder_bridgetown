@@ -1,16 +1,17 @@
 ---
-layouts: course
-name:  "Course number one"
-volume:   volume
+layout: course
+name: "Основная информация о виртуальных машинах"
+volume:  16 часов, 4 модуля
 annotation: annotation
+description: description about course
+price_rub: 7500
 --- 
-description: description about course one
 
-<% collections.units.resources.each do |unit| %>
+<% collections.group_units.resources.each do |group_unit| %>
   <article>
-    <a href="<%= unit.relative_url %>"><h2><%= unit.data.name %></h2></a>
+    <a href="<%= group_unit.relative_url %>"><h2><%= group_unit.data.name %></h2></a>
 
-    <p><%= unit.data.description %></p>
+    <p><%= group_unit.data.description %></p>
   </article>
 <% end %>
-<ul>
+<ul> 
