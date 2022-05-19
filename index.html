@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Units | Your awesome title</title>
+<title>Your awesome title: This site is totally awesome</title>
 
 <meta name="description" content="Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
 
@@ -40,7 +40,7 @@ setTimeout(() => {
 </script>
 
   </head>
-  <body class="page ">
+  <body class="default ">
     <div class="columns">
       <div class="column is-one-fifth">
         <header>
@@ -59,25 +59,46 @@ setTimeout(() => {
 </header>
       </div>
       <main class="column p-5">
-        <h1>Units</h1>
+        <div class="columns">
+    <div class="column is-four-fifth">
+        <h1 class="has-text-left mb-2 mt-0"> Список курсов </h1>
+    </div>
+    <div class="column is-one-fifth">
+        <div class="buttons is-right">
+            <button class="button is-success mt-3">
+                + Новый курс
+            </button>
+        </div>
+    </div>
+</div>
+<hr class="mt-3" />
 
-<article>
-    <a href="/course_builder_bridgetown/units/2022/05/19/unit_one/"><h2>unit 1</h2></a>
+<div class="courses blocks">
+        <div class="block"> 
+                 <div class="columns"> 
+                   <div class="column is-four-fifths">
+                        <p class="columns">Объем 16 часов, 4 модуля</p>
+                        <a class="is-size-5 columns" href="/course_builder_bridgetown/courses/2022/05/19/course_one/">Основная информация о виртуальных машинах</a>
+                   </div>
+                   <p class="column has-text-right is-size-5"><b>7500 $</b></p>
+                 </div>
+        </div>
+        <div class="block"> 
+                 <div class="columns"> 
+                   <div class="column is-four-fifths">
+                        <p class="columns">Объем 24 часа, 6 модулей</p>
+                        <a class="is-size-5 columns" href="/course_builder_bridgetown/courses/2022/05/19/course_two/">Стратегическое управление в образовании: методология и кейсы проектных решений</a>
+                   </div>
+                   <p class="column has-text-right is-size-5"><b>0 $</b></p>
+                 </div>
+        </div>
 
-    <p></p>
-  </article>
-<article>
-    <a href="/course_builder_bridgetown/units/2022/05/19/unit_three/"><h2>unit 3</h2></a>
-
-    <p></p>
-  </article>
-<article>
-    <a href="/course_builder_bridgetown/units/2022/05/19/unit_two/"><h2>unit 2</h2></a>
-
-    <p></p>
-  </article>
-<ul>
-</ul>
+</div>
+<style>
+.column a {
+    text-decoration: none;
+}
+</style>
 
 
       </main>
